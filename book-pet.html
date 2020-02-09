@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./js/all.js"></script>
+    <script src="https://kit.fontawesome.com/6be6db9500.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.js"></script>
+    <script src="./js/admin.js"> </script>
+    <link rel="shortcut icon" href="./assets/icono-petit.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.css">
+    <link rel="stylesheet" href="./css/admin.css" type="text/css">
+    <title>Mi Tablero</title>
+  </head>
+  <body>
+  <nav class="navbar navbar-white navbar-expand-md">
+    <div class="container">
+      <div class="d-flex justify-content-between">
+        <a href="./my-pets.html">
+          <img src="./assets/SVG/logo-petit.svg" class="logo-img"  alt="logo-website">
+        </a>
+      </div>
+      <div class="dropdown">
+        <button class="btn-profile" data-toggle="dropdown">
+          <img src="./assets/JPEG/perrito.jpg" alt="avatar" class="img-profile rounded-circle">
+          <p class="px-2 pt-3" style="font-family: Assistant-Bold;">Nombre Usuario</p>
+          <i class="fa fa-chevron-down mx-2"></i>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="./updatepet.php"><i class="fas fa-user-edit mr-2"></i>Editar Perfil</a>
+            <a class="dropdown-item" href="./index.html"><i class="fas fa-sign-out-alt mr-2"></i>Cerrar Sesión</a>
+          </div>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="breadcrumb-petit">
+    <ol class="breadcrumb-mi-tablero">
+      <li class="breadcrumb-item mi-tablero-item"><a href="./my-pets.html">Mi Tablero</a></li>
+      <li class="breadcrumb-item mi-tablero-item active"><a href="./mi-mascota.html">Mi Mascota</a></li>
+    </ol>
+  </div>
+  <!-- Termina menú -->
+  <script src="./js/bookpet.js"> </script>
+  <div class="container my-4">
+      <div class="row" style="margin:0;"><!--renglón del titulo de la pagina-->
+        <div class="col-12"><!--columna del titulo de la pagina-->
+          <h1 class="title">MI MASCOTA</h1>
+        </div><!-- termina columna del titulo de la pagina-->
+      </div><!--termina renglón del titulo de la pagina y boton de imprimir-->
+      <div class="row container-card" style="margin:0;"><!--es el contenedor de la cartilla digital-->
+        <div class="col-12 d-flex justify-content-center align-content-center title-card"> <!--Titulo de cartilla digital-->
+          <img src="./assets/SVG/logo-petit.svg" class="logo-card" alt="logo">
+          <h1> CARTILLA DIGITAL</h1>
+        </div><!-- Termina titulo de cartilla digital-->
+        <div class="row"><!--renglón cartilla digital donde estan datos e imagen de mascota-->
+            <div class="col-lg-4 col-12 d-flex justify-content-center"><!--columna cartilla digital donde esta imagen de mascota-->
+              <img id= "petPic" class="pet-pic" src="" >
+            </div><!--termina columna cartilla digital donde esta imagen de mascota-->
+            <div class="col-lg-8 col-12"><!--columna cartilla digital donde estan datos1 de mascota-->
+              <div class="row py-2">
+                <div class="col-md-6 col-12">
+                  <label class="col-12 title-pet">Nombre:</label>
+                  <label id="petName" class="col-12 info-pet"></label>
+                  <label class="col-12 title-pet">Sexo:</label>
+                  <label id="petGender" class="col-12 info-pet"></label>
+                  <label class="col-12 title-pet">Color:</label>
+                  <label id="petColor" class="col-12 info-pet"></label>
+                  <label class="col-12 title-pet">Dueño:</label>
+                  <label id="petOwner" class="col-12 info-pet"></label>
+                  <label class="col-12 title-pet">Dirección:</label>
+                  <label id="petAddress" class="col-12 info-pet"></label>
+                </div>
+                <div class="col-md-6 col-12">
+                  <label class="col-12 title-pet">Fecha de Nacimiento:</label>
+                  <label id="petBirthDate" class="col-12 info-pet"></label>
+                  <label class="col-12 title-pet">Raza:</label>
+                  <label id="petBreed" class="col-12 info-pet"></label>
+                  <label class="col-12 title-pet">Teléfono:</label>
+                  <label id="petPhone" class="col-12 info-pet"></label>
+                  <label class="col-12 title-pet">ID-PETIT:</label>
+                  <label id="petId" class="col-12 info-pet"></label>
+                  <label class="col-12 title-pet">Veterinaria:</label>
+                  <label id="petVetName" class="col-12 info-pet"></label>
+                </div>
+              </div>
+            </div><!-- termina columna cartilla digital donde estan datos1 de mascota-->
+        </div><!--termian renglón cartilla digital donde estan datos e imagen de mascota-->
+        <div class="divider-title-card">Vacunas Recibidas</div>
+        <div class="table"><!--área donde esta la tabla-->
+          <table id ="table_vacunas" class="table"><!-- tabla-->
+            <thead class ="title-table text-center"><!--área donde estan los nombres de las columnas de la tabla-->
+              <tr><!--fila donde estan los nombres de las columnas de la tabla-->
+                <th data-field="sn" data-formatter="element">S/N</th>
+                <th data-field="vaccineType">TIPO DE VACUNA</th>
+                <th data-field="vaccineDate">FECHA</th>
+                <th data-field="vaccineDescription">DESCRIPCIÓN</th>
+              </tr><!-- termina fila donde estan los nombres de las columnas de la tabla-->
+            </thead><!--termina área donde estan los nombres de las columnas de la tabla-->
+          </table><!--termina tabla-->
+        </div><!--termina el área donde esta la tabla-->
+      </div><!--termian el contenedor de la cartilla digital-->
+  </div>
+  
+  <footer class="footer">
+    <ul class="footer-links">
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Aviso de privacidad</a></li>
+      <li><a href="#">Términos y Condiciones</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+    <div class="social-media">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+    <div class="footer-brand">
+      ®PET IT 2020 Reservados todos los derechos.
+    </div>
+</footer>
+</body>
+</html>

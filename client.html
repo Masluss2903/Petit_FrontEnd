@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./js/all.js"></script>
+    <script src="https://kit.fontawesome.com/6be6db9500.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.js"></script>
+    <script src="./js/admin.js"> </script>
+    <link rel="shortcut icon" href="./assets/icono-petit.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.css">
+    <link rel="stylesheet" href="./css/admin.css" type="text/css">
+    <title>Mi Tablero</title>
+  </head>
+  <body>
+  <nav class="navbar navbar-white navbar-expand-md">
+    <div class="container">
+      <div class="d-flex justify-content-between">
+        <a href="./panel.html">
+          <img src="./assets/SVG/logo-petit.svg" class="logo-img"  alt="logo-website">
+        </a>
+      </div>
+      <div class="dropdown">
+        <button class="btn-profile" data-toggle="dropdown">
+          <img src="./assets/JPEG/perrito.jpg" alt="avatar" class="img-profile rounded-circle">
+          <p class="px-2 pt-3" style="font-family: Assistant-Bold;">Nombre Usuario</p>
+          <i class="fa fa-chevron-down mx-2"></i>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="./update-user.html"><i class="fas fa-user-edit mr-2"></i>Editar Perfil</a>
+            <a class="dropdown-item" href="./index.html"><i class="fas fa-sign-out-alt mr-2"></i>Cerrar Sesión</a>
+          </div>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="breadcrumb-petit">
+    <ol class="breadcrumb-mi-tablero">
+      <li class="breadcrumb-item mi-tablero-item"><a href="./my-pets.html">Mi Tablero</a></li>
+      <li class="breadcrumb-item mi-tablero-item active"><a href="./client.html">Mis Clientes</a></li>
+    </ol>
+  </div>
+  <!-- Termina menú -->
+    <script src="./js/client.js"> </script>
+
+    <div class="container my-4">
+      <section><!--Toda la parte que contien lo relacionado a la catilla digital-->
+        <div class="row"><!--renglón del titulo de la pagina-->
+          <div class="col-12"><!--columna del titulo de la pagina-->
+            <h1 class="title">MIS CLIENTES</h1>
+          </div><!-- termina columna del titulo de la pagina-->
+          </div><!--termina renglón del titulo de la pagina y boton de imprimir-->
+        <div class="table-my-pet">
+          <div class="d-flex justify-content-start pl-3">
+            <a href="./create-client.html" class="btn btn-blue" id= "newpet"><i class="fas fa-plus plus"></i> NUEVO CLIENTE</a>
+          </div>
+          <table id="clients" class="table table-hover">
+            <thead><!--área donde estan los nombres de las columnas de la tabla-->
+              <tr><!--fila donde estan los nombres de las columnas de la tabla-->
+                <th data-field="clientId">ID</th>
+                <th data-field="clientName">NOMBRE</th>
+                <th data-field="clientDate">ALTA</th>
+                <!--<th data-field="petId" data-formatter="petButtonVaccines">VACUNAS</th>
+                <th data-field="petId" data-formatter="petCalendarButton">CALENDARIO</th>-->
+                <th data-field="clientId" data-formatter="clientThreeBtns">OPCIONES</th>
+              </tr><!-- termina fila donde estan los nombres de las columnas de la tabla-->
+
+            </thead><!--termina área donde estan los nombres de las columnas de la tabla-->
+
+          </table>
+        </div>
+    </div><!--termian el contenedor de la cartilla digital-->
+    <footer class="footer">
+        <ul class="footer-links">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Aviso de privacidad</a></li>
+          <li><a href="#">Términos y Condiciones</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+        <div class="social-media">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="footer-brand">
+          ®PET IT 2020 Reservados todos los derechos.
+        </div>
+    </footer>
+
+  </body>
+</html>

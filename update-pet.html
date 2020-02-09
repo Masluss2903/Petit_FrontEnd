@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./js/all.js"></script>
+    <script src="https://kit.fontawesome.com/6be6db9500.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.js"></script>
+    <script src="./js/admin.js"> </script>
+    <link rel="shortcut icon" href="./assets/icono-petit.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.css">
+    <link rel="stylesheet" href="./css/admin.css" type="text/css">
+    <link rel="stylesheet" href="./css/uploadImage.css">
+    <title>Mi Tablero</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-white navbar-expand-md">
+    <div class="container">
+        <div class="d-flex justify-content-between">
+        <a href="./panel.html">
+            <img src="./assets/SVG/logo-petit.svg" class="logo-img"  alt="logo-website">
+        </a>
+        </div>
+        <div class="dropdown">
+        <button class="btn-profile" data-toggle="dropdown">
+            <img src="./assets/JPEG/perrito.jpg" alt="avatar" class="img-profile rounded-circle">
+            <p class="px-2 pt-3" style="font-family: Assistant-Bold;">Nombre Usuario</p>
+            <i class="fa fa-chevron-down mx-2"></i>
+            <div class="dropdown-menu">
+            <a class="dropdown-item" href="./updatepet.php"><i class="fas fa-user-edit mr-2"></i>Editar Perfil</a>
+            <a class="dropdown-item" href="./index.html"><i class="fas fa-sign-out-alt mr-2"></i>Cerrar Sesión</a>
+            </div>
+        </button>
+        </div>
+    </div>
+    </nav>
+    <div class="breadcrumb-petit">
+    <ol class="breadcrumb-mi-tablero">
+        <li class="breadcrumb-item mi-tablero-item"><a href="./my-pets.html">Mi Tablero</a></li>
+        <li class="breadcrumb-item mi-tablero-item active"><a href="./update-pet.html">Editar Mascota</a></li>
+    </ol>
+    </div>
+    <!-- Aquí termina el header, agregado durante migración -->
+
+    <div class="container py-4">
+        <div class="row"><!--renglón del titulo de la pagina-->
+            <div class="col-12"><!--columna del titulo de la pagina-->
+                <h1 class="title">EDITAR MI MASCOTA</h1>
+            </div><!-- termina columna del titulo de la pagina-->
+        </div><!--termina renglón del titulo de la pagina y boton de imprimir-->
+
+        <form action="" method="POST" class="row pet-info-form">
+
+            <div class="col-12">
+                <div class="row">
+                    <label for="pet_name" class="col-md-2 col-12 form-label-pet">NOMBRE:</label>
+                    <div class="col-md-10 col-12">
+                        <div class="form-group-icon">
+                            <input type="text" placeholder="Nombre" class="form-group-input" name="pet_name" id="pet_name">
+                            <i class="fa fa-dog"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="row">
+                    <label for="pet_gender" class="col-md-2 col-12 form-label-pet">GENERO:</label>
+                    <div class="col-md-10 col-12">
+                        <select name="pet_gender" id="pet_gender" required">
+                            <option value="default" selected>Selecciona el sexo de la mascota</option>
+                            <option value="1">Macho</option>
+                            <option value="2">Hembra</option>
+                        </select>
+                        <div class="invalid-feedback">prueba</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="row">
+                    <label for="pet_breed" class="col-md-2 col-12 form-label-pet">RAZA:</label>
+                    <div class="col-md-10 col-12">
+                        <select name="pet_breed" id="pet_breed" onchange="changeDoggo(this)" required>
+                            <option value="">Selecciona su raza</option>
+                        </select>
+                        <div class="invalid-feedback">prueba</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="row">
+                    <label for="pet_color" class="col-md-2 col-12 form-label-pet">COLOR:</label>
+                    <div class="col-md-10 col-12">
+                        <select name="pet_color" id="pet_color" required>
+                            <option value="">Seleccione su color</option>
+                            <option value="blanco">Blanco</option>
+                            <option value="negro">Negro</option>
+                            <option value="cafe">Café</option>
+                            <option value="crema">Crema</option>
+                            <option value="gris">Gris</option>
+                        </select>
+                        <div class="invalid-feedback">prueba</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="row">
+                    <label for="pet_birthday" class="col-md-2 col-12 form-label-pet">CUMPLEAÑOS:</label>
+                    <div class="col-md-10 col-12">
+                        <input type="date" class="form-input-date" name="pet_birthday" id="pet_birthday" placeholder="Fecha de nacimiento" aria-label="pet_birthday" aria-describedby="basic-addon1" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="row">
+                    <label for="pet_weight" class="col-md-2 col-12 form-label-pet">PESO:</label>
+                    <div class="col-md-10 col-12">
+                        <div class="form-group-icon">
+                            <input type="text" placeholder="Peso Kg" class="form-group-input" name="pet_weight" id="pet_weight">
+                            <i class="fas fa-weight-hanging"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="row">
+                    <label for="pet_blood_type" class="col-md-2 col-12 form-label-pet">TIPO DE SANGRE:</label>
+                    <div class="col-md-10 col-12">
+                        <select name="pet_blood_type" id="pet_blood_type" required>
+                            <option value="default">Seleccione el tipo de sangre de la mascota</option>
+                            <option value="DEA-1.1 (A1)">DEA-1.1 (A1)</option>
+                            <option value="DEA-1.2 (A2)">DEA-1.2 (A2)</option>
+                            <option value="DEA-3 (B)">DEA-3 (B)</option>
+                            <option value="DEA-4 (C)">DEA-4 (C)</option>
+                            <option value="DEA-5 (D)">DEA-5 (D)</option>
+                            <option value="DEA-6 (F)">DEA-6 (F)</option>
+                            <option value="DEA-7 (Tr)">DEA-7 (Tr)</option>
+                            <option value="DEA-8 (He)">DEA-8 (He)</option>
+                        </select>
+                        <div class="invalid-feedback">prueba</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="row">
+                    <label for="pet_chars" class="col-md-2 col-12 form-label-pet">CARACTERÍSTICAS:</label>
+                    <div class="col-md-10 col-10">
+                        <div class="form-group-icon">
+                            <textarea rows="5" class="textarea-icon" name="pet_chars" id="pet_chars" placeholder="Agregue características especiales de la mascota, alguna mancha distintiva por ejemplo."></textarea>
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 form-group">
+                <div class="d-flex justify-content-start align-content-center">
+                    <button class="btn btn-blue" type="button" onclick="$('.file-upload-input').trigger( 'click' )">
+                    Subir foto <i class="fa fa-upload"></i>
+                    </button>
+                </div>
+                <div class="file-upload">
+                    <div class="image-upload-wrap">
+                        <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+                        <div class="drag-text">
+                        <p>Arrastra aquí una imagen O Selecciona una imagen JPEG, JPG o PNG de máximo 480 x 480</p>
+                        </div>
+                    </div>
+                    <div class="file-upload-content">
+                        <img class="file-upload-image" src="#" alt="your image" />
+                        <div class="image-title-wrap">
+                        <button type="button" onclick="removeUpload()" class="remove-image">x 
+                        </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 d-flex justify-content-end">
+                <button class="btn btn-green" type="submit">Actualizar</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="./js/pet-photo.js"></script>
+    <script src="./js/dogBreedAPI.js"></script>
+    <script src="./js/simple-select.js"></script>
+    <!-- Aquí termina cuerpo de la vista e inicia footer, agregado durante migración -->
+    <footer class="footer">
+        <ul class="footer-links">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Aviso de privacidad</a></li>
+          <li><a href="#">Términos y Condiciones</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+        <div class="social-media">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="footer-brand">
+          ®PET IT 2020 Reservados todos los derechos.
+        </div>
+    </footer>
+
+  </body>
+</html>

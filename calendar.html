@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./js/all.js"></script>
+    <script src="https://kit.fontawesome.com/6be6db9500.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.js"></script>
+    <script src="./js/admin.js"> </script>
+    <link rel="shortcut icon" href="./assets/icono-petit.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.css">
+    <link rel="stylesheet" href="./css/fullCalendar/core/main.css" type="text/css">
+    <link rel="stylesheet" href="./css/fullCalendar/daygrid/main.css" type="text/css">
+    <link rel="stylesheet" href="./css/admin.css" type="text/css">
+    <link rel="stylesheet" href="./css/calendar.bootstrap.css" type="text/css">
+    <title>Mi Tablero</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-white navbar-expand-md">
+    <div class="container">
+        <div class="d-flex justify-content-between">
+        <a href="./panel.html">
+            <img src="./assets/SVG/logo-petit.svg" class="logo-img"  alt="logo-website">
+        </a>
+        </div>
+        <div class="dropdown">
+        <button class="btn-profile" data-toggle="dropdown">
+            <img src="./assets/JPEG/perrito.jpg" alt="avatar" class="img-profile rounded-circle">
+            <p class="px-2 pt-3" style="font-family: Assistant-Bold;">Nombre Usuario</p>
+            <i class="fa fa-chevron-down mx-2"></i>
+            <div class="dropdown-menu">
+            <a class="dropdown-item" href="./updatepet.php"><i class="fas fa-user-edit mr-2"></i>Editar Perfil</a>
+            <a class="dropdown-item" href="./index.html"><i class="fas fa-sign-out-alt mr-2"></i>Cerrar Sesión</a>
+            </div>
+        </button>
+        </div>
+    </div>
+    </nav>
+    <div class="breadcrumb-petit">
+    <ol class="breadcrumb-mi-tablero">
+        <li class="breadcrumb-item mi-tablero-item"><a href="./my-pets.html">Mi Tablero</a></li>
+        <li class="breadcrumb-item mi-tablero-item active"><a href="./update-pet.html">Editar Mascota</a></li>
+    </ol>
+    </div>
+    
+    <div class="container py-4">
+        <div class="row"><!--renglón del titulo de la pagina-->
+          <div class="col-12"><!--columna del titulo de la pagina-->
+            <h1 class="title">CALENDARIO</h1>
+          </div><!-- termina columna del titulo de la pagina-->
+        </div><!--termina renglón del titulo de la pagina y boton de imprimir-->
+        <div id="calendar"></div>
+        <div class="d-flex flex-column flex-md-row justify-content-around py-3" style="background: #efefef;">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <div class="d-flex justify-content-center align-items-center">
+                    <div style="width:100px;height:3px;background: skyblue;"></div><p class="pt-2 px-2">Vacuna Obligatoria</p>
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                    <div style="width:100px;height:3px;background: yellow;"></div><p class="pt-2 px-2">Vacuna Opcional</p>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center align-content-center">
+                <div style="width: 30px; height:30px;background: red;"></div>
+                <p class="px-2 pt-1">Dia actual</p>
+            </div>
+        </div>
+    </div>
+    <!-- Aquí termina cuerpo de la vista e inicia footer, agregado durante migración -->
+    <footer class="footer">
+        <ul class="footer-links">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Aviso de privacidad</a></li>
+          <li><a href="#">Términos y Condiciones</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+        <div class="social-media">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="footer-brand">
+          ®PET IT 2020 Reservados todos los derechos.
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="./js/all.js"></script>
+      <script src="./js/bootstrap.min.js"></script>
+      <script src="./js/owl.carousel.js"></script>
+      <script src="./js/fullcalendar/core/main.js"></script>
+      <script src="./js/fullcalendar/daygrid/main.js"></script>
+      <script src="./js/main.js"></script>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var calendarEl = document.getElementById('calendar');
+
+          var calendar = new FullCalendar.Calendar(calendarEl, {
+              plugins: [ 'dayGrid' ],
+              locale: 'es',
+              header: {
+                  left: 'prev',
+                  center: 'title',
+                  right: 'next'
+              },
+              events: 'http://localhost:3000/js/events.json'
+          });
+
+          calendar.render();
+        });
+    </script>
+  </body>
+</html>

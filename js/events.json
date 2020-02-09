@@ -1,0 +1,14 @@
+[
+    {
+        "start": "2020-02-06",
+        "className": "fc-vacuna-opcional-icon"
+    },
+    {
+        "start": "2020-02-10",
+        "className": "fc-vacuna-obligatoria-icon"
+    },
+    {
+        "start": "2020-02-25",
+        "className": "fc-vacuna-obligatoria-icon"
+    }
+]
