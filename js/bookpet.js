@@ -1,66 +1,79 @@
-var data = [
-  {
-    "sn":"S",
-    "vaccineType":"PARVOVIROSIS",
-    "vaccineDate":"15/01/2018",
-    "vaccineDescription":"PARVOVIROSIS CANINA"
+// var data = [
+//   {
+//     "sn":"S",
+//     "vaccineType":"PARVOVIROSIS",
+//     "vaccineDate":"15/01/2018",
+//     "vaccineDescription":"PARVOVIROSIS CANINA"
+//
+//   },{
+//     "sn":"S",
+//     "vaccineType":"QUÍNTUPLE 1RA",
+//     "vaccineDate":"23/03/2018",
+//     "vaccineDescription":"PARVOVIROSIS/MOQUILLO/HEPATITIS/PARAINFLUENZA"
+//   },{
+//     "sn":"S",
+//     "vaccineType":"QUÍNTUPLE 2RA",
+//     "vaccineDate":"08/05/2019",
+//     "vaccineDescription":"PARVOVIROSIS/MOQUILLO/HEPATITIS/PARAINFLUENZA"
+//   },{
+//     "sn":"S",
+//     "vaccineType":"SEXTUPLE",
+//     "vaccineDate":"11/11/2019",
+//     "vaccineDescription":"LEPTOSPIROSIS CANINA"
+//   },{
+//     "sn":"N",
+//     "vaccineType":"TOS DE LAS PERRERAS",
+//     "vaccineDate":"2/02/2020",
+//     "vaccineDescription":"RABIA CANINA"
+//   }
+// ];
 
-  },{
-    "sn":"S",
-    "vaccineType":"QUÍNTUPLE 1RA",
-    "vaccineDate":"23/03/2018",
-    "vaccineDescription":"PARVOVIROSIS/MOQUILLO/HEPATITIS/PARAINFLUENZA"
-  },{
-    "sn":"S",
-    "vaccineType":"QUÍNTUPLE 2RA",
-    "vaccineDate":"08/05/2019",
-    "vaccineDescription":"PARVOVIROSIS/MOQUILLO/HEPATITIS/PARAINFLUENZA"
-  },{
-    "sn":"S",
-    "vaccineType":"SEXTUPLE",
-    "vaccineDate":"11/11/2019",
-    "vaccineDescription":"LEPTOSPIROSIS CANINA"
-  },{
-    "sn":"N",
-    "vaccineType":"TOS DE LAS PERRERAS",
-    "vaccineDate":"2/02/2020",
-    "vaccineDescription":"RABIA CANINA"
-  }
-];
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
 
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
 
-var datoscartilla = {
-  "petName":"Siri",
-  "petGender":"Hembra",
-  "petOwner":"María Martínez",
-  "petVetName":"Clínica Guau Vet",
-  "petBirthDate":"01 de diciembre del 2017",
-  "petBreed":"Golden Retriever",
-  "petId":"986214554",
-  "petAddress":"Av. Argómedo #6241,Villa altos del nilo,Guadalajara",
-  "petColor":"Blanco",
-  "petPhone":"33-44-66-77-99",
-  "petPic":"assets/JPEG/siri.jpg"
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
 };
 
+
 $(document).ready(function() {
-  llenarInfo()
-  llenarTabla();
+  console.log("prueba")
+  var petId = getUrlParameter('petId')
+  llenarInfo(petId)
+
+  // llenarTabla();
 });
 
-function llenarInfo() {
-  setLabelText('#petName', datoscartilla.petName)
-  setLabelText('#petGender', datoscartilla.petGender)
-  setLabelText('#petOwner', datoscartilla.petOwner)
-  setLabelText('#petVetName', datoscartilla.petVetName)
-  setLabelText('#petBirthDate', datoscartilla.petBirthDate)
-  setLabelText('#petBreed', datoscartilla.petBreed)
-  setLabelText('#petId', datoscartilla.petId)
-  setLabelText('#petAddress', datoscartilla.petAddress)
-  setLabelText('#petColor', datoscartilla.petColor)
-  setLabelText('#petPhone', datoscartilla.petPhone)
-  $("#petPic").attr("src",datoscartilla.petPic);
+function llenarInfo(petId) {
+  $.ajax({
+    url:"http://localhost:8080/pet/" + petId
+  }).then(function(datoscartilla){
+    setLabelText('#petName', datoscartilla.petName)
+    setLabelText('#petGender', datoscartilla.petGender)
+    setLabelText('#petBirthDate', datoscartilla.petBirthday)
+    setLabelText('#petBreed', datoscartilla.petBreed)
+    setLabelText('#petId', datoscartilla.petId)
+    setLabelText('#petColor', datoscartilla.petColor);
+    $("#petPic").attr("src",datoscartilla.petPhoto);
+    setLabelText('#petOwner', datoscartilla.client.clientName)
+    setLabelText('#petAddress', datoscartilla.client.clientAddress)
+    setLabelText('#petPhone', datoscartilla.client.clientPhone)
+    setLabelText('#petVetName', datoscartilla.veterinary.vetName)
+
+    $('#table_vacunas').bootstrapTable({data:datoscartilla.petVacciness})
+  });
+
 }
+
+
 
 function setLabelText(labelId, labelText){
   $(labelId).empty()
@@ -68,16 +81,10 @@ function setLabelText(labelId, labelText){
 }
 
 
-function llenarTabla() {
-  $('#table_vacunas').bootstrapTable({
-    data:data
-  })
-}
+// function llenarTabla() {
+//   $('#table_vacunas').bootstrapTable({data:data})
+// }
 
 function element(value){
-  if(value === "S"){
     return value = '<i class="fas fa-check ok"></i>'
-  } else{
-    return value = '<i class="fas fa-times not"></i>'
-  }
 }

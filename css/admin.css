@@ -518,7 +518,7 @@ display: none;
 }
 .form-input-date:after {
   font-family: "FontAwesome5";
-  font-weight: 900; 
+  font-weight: 900;
   content: "\f073";
   color: var(--gray);
   padding: 0 5px;
@@ -680,5 +680,298 @@ footer {
 }
 
 @media(max-width: 480px){
-  
+
+}
+/*Comienza header*/
+
+.tamanochico {
+  width: 10em;
+  height: auto;
+  padding: 2em 2em;
+}
+
+#menusuario {
+  background-color: white;
+  color: #330033;
+  border-color: none;
+  padding: none;
+  padding: none;
+}
+
+.purple {
+  background-color: #330033;
+  color: white;
+}
+
+.img_menu {
+  width: 70px;
+  height: 70px;
+  margin-top: 20px;
+}
+
+.edit:hover {
+  background-color: #330033;
+  color: white !important;
+}
+
+.fas {
+  color: #330033;
+  margin-right: 5px;
+}
+
+.mitablero {
+  font-family: "HeadingPro-Bold";
+  text-transform: uppercase;
+  font-size: 2em;
+  margin: 10px;
+}
+
+#mitableroid {
+  margin-bottom: 3em;
+}
+
+/*Start mi mascota*/
+
+.contenedor1 {
+  border-color: var(--blue);
+  border-style: solid;
+  border-left-width: medium;
+  border-radius: 2em;
+  margin-bottom: 1em;
+}
+
+#vacunas {
+  background-color: #2e82bc;
+  font-size: 2em;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-family: "HeadingPro-Bold";
+  border-right: none;
+}
+
+.titletable {
+  background-color: #330033;
+  color: white;
+}
+.petpic {
+  margin-top: 2em;
+  margin-left: 1.5em;
+  height: 250px;
+  width: 250px;
+}
+
+.titelcol {
+  margin: 20px;
+}
+.table td,
+.table th {
+  text-align: center;
+}
+
+#borderrow {
+  border-radius: 0.5px;
+  border-color: #2e82bc;
+  border-style: solid;
+  border-width: auto;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+
+.titulospet {
+  color: #2e82bc;
+  font-family: "Assistant";
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-top: 20px;
+}
+
+.datospet {
+  color: #330033;
+  font-family: "Assistant";
+  font-weight: bold;
+  font-size: 1.3em;
+  padding-bottom: 10px;
+}
+
+#cartdig {
+  font-family: "HeadingPro-Bold";
+  color: #330033;
+  font-weight: bold;
+}
+
+.titmascos {
+  color: #330033;
+  font-size: 2.5em;
+  text-decoration: underline #fcbe10;
+  font-family: "HeadingPro-Bold";
+}
+
+#cartillalogo,
+#cartdig {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  image-orientation: center;
+  margin-right: 2em;
+  padding-left: 10px;
+}
+
+.ok {
+  color: var(--success);
+  font-size: 1.5em;
+}
+.not {
+  color: var(--danger);
+  font-size: 1.5em;
+}
+/* comienza forma de información de mascota */
+.petInfo-form {
+  background-color: rgb(242, 242, 242);
+  margin: 5em auto;
+  max-width: 80%;
+  height: auto;
+  padding: 5em 5em;
+  border: none;
+  border-radius: 0.5em;
+}
+
+.form-control,
+.form-control {
+  border-left: none;
+}
+.col-form-label {
+  font-weight: bold;
+}
+
+.input-group-text {
+  background-color: white;
+  border-right: none;
+}
+
+.btn-upload-photo {
+  padding: 0.5em 0.5em;
+}
+
+.new-color {
+  background-color: rgb(118, 178, 56);
+  border: none;
+}
+.new-color:hover {
+  background-color: rgb(118, 120, 0);
+}
+
+.image_preview {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #cccccc;
+  overflow: hidden;
+}
+.image-preview__image {
+  display: none;
+  width: 30%;
+}
+
+/* comienza vista vacunas */
+
+.separarBoton {
+  margin-top: 5em;
+}
+
+/* Comienza footer*/
+footer {
+  width: 100%;
+  height: auto;
+  background-color: var(--primary);
+}
+.social-media {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+.social-media a {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  font-size: 2rem;
+  border-radius: 100%;
+  color: var(--white);
+  background: transparent;
+  transition: 0.3s ease-in-out;
+}
+.social-media a:hover {
+  color: var(--yellow);
+}
+.footer-links {
+  font-family: HeadingPro-Bold;
+  width: 100%;
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+.footer-links li {
+  list-style-image: url(../assets/SVG/huella-perro.svg);
+  margin: 0 1.5rem;
+}
+.footer-links li a {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--white);
+  transition: 0.3s ease-in-out;
+}
+.footer-links li a:hover {
+  color: var(--yellow);
+}
+.footer-brand {
+  width: 100%;
+  height: auto;
+  padding: 0.5rem 0;
+  text-align: center;
+  color: var(--white);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 992px) {
+  .carousel-caption {
+    padding: 0 30% 0 15%;
+  }
+  .carousel-caption h3 {
+    font-size: 2rem;
+  }
+  .carousel-indicators li {
+    width: 15px;
+    height: 15px;
+  }
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-caption h3,
+  .carousel-caption p {
+    display: none;
+  }
+  .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    font-size: 1.5rem;
+  }
 }
