@@ -45,7 +45,6 @@ var getUrlParameter = function getUrlParameter(sParam) {
 
 
 $(document).ready(function() {
-  console.log("prueba")
   var petId = getUrlParameter('petId')
   llenarInfo(petId)
 
