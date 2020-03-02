@@ -7,7 +7,7 @@ const fetchDoggoBreeds = async () => {
   const populateDoggoSelect = (breeds) => {
       const select = document.querySelector('.pet_breed');
       const breedOptions = breeds.map(breed => {
-          const option = document.createElement('option'); 
+          const option = document.createElement('option');
           option.text = breed.name;
           option.value = breed.name;
           return option;
@@ -21,5 +21,5 @@ const fetchDoggoBreeds = async () => {
   const changeDoggo = () => {
       console.log(event);
   }
-  
+
   fetchDoggoBreeds();
