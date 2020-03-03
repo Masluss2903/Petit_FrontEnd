@@ -1,261 +1,250 @@
+<!--<?php include "./header.html" ?>Se manda llamara la pagina de header mediante php-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Pet it - Oficial</title>
-    
+    <title>Blog</title>
+    <script src="./js/all.js"></script>
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="shortcut icon" href="./assets/icono-petit.png" type="image/x-icon"/>
+    <link
+      rel="shortcut icon"
+      href="./assets/icono-petit.png"
+      type="image/x-icon"
+    />
   </head>
   <body>
-    <nav class="navbar navbar-petit2 navbar-expand-md">
-      <div class="container">
-        <a class="navbar-brand" href="./index.html"
+    <nav class="navbar navbar-petit navbar-expand-md" id="navbarPetit_blog">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"
           ><img src="./assets/SVG/logo-petit.svg" width="100px"
         /></a>
         <button
+          id="font-menu"
           class="navbar-toggler"
+          type="button"
           data-toggle="collapse"
           data-target="#navbarSignup"
           aria-controls="navbarSignup"
           aria-expanded="false"
-          aria-label="Toggle navigation">
+          aria-label="Toggle navigation"
+        >
           Menú<i class="fa fa-bars ml-2"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarSignup">
-          <ul class="navbar-nav ml-auto">
+          <ul class="navbar-nav ml-auto" id="options">
             <li class="nav-item active">
-              <a class="nav-link" href="./index.html">
-                Inicio <span class="sr-only">(current)</span>
-              </a>
+              <a class="nav-link" href="index.html#carouselExampleCaptions"
+                >Inicio <span class="sr-only">(current)</span></a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./blog.html">Blog</a>
+              <a class="nav-link" href="index.html#team">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
             </li>
             <li class="nav-item dropdown">
+              <a class="nav-link" href="index.html#contacto">Contacto</a>
+            </li>
+            <li class="nav-item dropdown" id="btn-ingresar">
               <a
-                class="btn btn-signup"
-                id="navbarSignup"
+                class="btn btn-inicio dropdown-toggle"
                 role="button"
-                data-toggle="dropdown">
-                Ingresar <i class="fas fa-chevron-down ml-1"></i>
-              </a>
+                data-toggle="dropdown"
+                href="#"
+                >Ingresar</a
+              >
               <div class="dropdown-menu" aria-labelledby="navbarSignup">
-                <a class="dropdown-item" data-toggle="modal" data-target="#loginUser">Iniciar sesión</a>
-                <a class="dropdown-item" data-toggle="modal" data-target="#registerUser">Crear cuenta</a>
+                <a
+                  class="dropdown-item"
+                  data-toggle="modal"
+                  data-target="#loginUser"
+                  >Iniciar sesión</a
+                >
+                <a
+                  class="dropdown-item"
+                  data-toggle="modal"
+                  data-target="#registerUser"
+                  >Crear cuenta</a
+                >
               </div>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <div class="container py-5">
-      <h1 class="title-blog mb-5">Blog</h1>
-      <div class="row">
 
-        <div class="col-md-4 col-12 mb-2">
-          <div class="card-blog">
-            <a href="#">
-              <img src="./assets/PNG/new-03.png" class="card-img-top">
-            </a>
+    <br id="navbar-header" />
+
+    <h1 id="title">Blog</h1>
+    <hr id="line-title" />
+
+    <div class="container-fluid">
+      <div class="row" id="first">
+        <div class="col-12 col-md-4 d-flex align-items-stretch">
+          <div class="card">
+            <img
+              src="./assets/JPG/dog-joint.jpg"
+              class="card-img-top"
+              id="img-blog"
+            />
             <div class="card-body">
-              <div class="title-card">
-                <div class="divider-left"></div>
-                <h3>Los perros gemelos se agotan</h3>
-              </div>
-              <div class="date-card">
-                <p>29/98/2020</p>
-                <p style="font-family: Assistant-Bold;color: #;">Autor. A</p>
-              </div>
+              <hr id="line-cards" />
+              <h5 class="card-title">How To Keep Your Dogs Joints Healthy</h5>
+              <h6 id="author">
+                21 enero 2019
+                <li>author a.</li>
+              </h6>
               <p class="card-text">
-                Faints contribution fifty specified appearing copyright reveal
-                side third. Supply contributors did incur but no...
+                Normal wear and tear on joints occurs daily. Cartilage protects
+                your dog’s bones and joints from the friction caused by everyday
+                movement...
               </p>
-              <div class="d-flex justify-content-end">
-                <a href="./blog_example.html" class="btn btn-outline-primary">Leer más</a>
+              <a href="blog-example.html" class="btn btn-primary" id="btn">
+                Leer más
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 d-flex align-items-stretch">
+          <div class="card">
+            <img
+              src="./assets/JPEG/dog-car-safety.jpg"
+              class="card-img-top"
+              alt="..."
+              id="img-blog"
+            />
+            <div class="card-body">
+              <hr id="line-cards" />
+              <h5 class="card-title">Dog Car Safety Tips</h5>
+              <h6 id="author">
+                21 ENERO, 2020
+                <li>Author.A</li>
+              </h6>
+
+              <p class="card-text">
+                It doesn’t matter if it’s a long road trip or a short drive to
+                the dog park; it’s important to properly secure your dog in the
+                car...
+              </p>
+              <a href="blog-example2.html" class="btn btn-primary" id="btn">
+                Leer más
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 d-flex align-items-stretch">
+          <div class="card">
+            <img
+              src="./assets/JPEG/adopt-a-dog.jpg"
+              class="card-img-top"
+              alt="..."
+              id="img-blog"
+            />
+            <div class="card-body">
+              <hr id="line-cards" />
+              <h5 class="card-title">How to Adopt a Dog</h5>
+              <h6 id="author">
+                21 ENERO, 2020
+                <li>Author.A</li>
+              </h6>
+              <p class="card-text">
+                Adopting a dog is a big step. There are a lot of things to
+                consider, from choosing the right one for...
+              </p>
+              <a href="blog-example3.html" class="btn btn-primary" id="btn">
+                Leer más
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex" id="column2">
+      <div class="container-fluid">
+        <div class="row" id="first">
+          <div class="col-12 col-md-4 d-flex align-items-stretch">
+            <div class="card">
+              <img
+                src="./assets/JPEG/itchy-lab.jpg"
+                class="card-img-top"
+                alt="..."
+                id="img-blog"
+              />
+              <div class="card-body">
+                <hr id="line-cards" />
+                <h5 class="card-title">Why Do Dogs Have Itchy Ears?</h5>
+                <h6 id="author">
+                  21 ENERO, 2020
+                  <li>Author.A</li>
+                </h6>
+                <p class="card-text">
+                  Don’t just assume your dog’s ears itch if he scratches them
+                  frequently. It may be a sign of a painful infection...
+                </p>
+                <a href="blog-example4.html" class="btn btn-primary" id="btn">
+                  Leer más
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 d-flex align-items-stretch">
+            <div class="card">
+              <img
+                src="./assets/JPEG/dry-skin.jpg"
+                class="card-img-top"
+                alt="..."
+                id="img-blog"
+              />
+              <div class="card-body">
+                <hr id="line-cards" />
+                <h5 class="card-title">What to Do If Your Dog Has Dry Skin</h5>
+                <h6 id="author">
+                  21 ENERO, 2020
+                  <li>Author.A</li>
+                </h6>
+                <p class="card-text">
+                  You’re not the only one who suffers from dry skin in the
+                  winter. When the heat comes on more frequently in the house,
+                  your pet may also become itchy...
+                </p>
+                <a href="blog-example5.html" class="btn btn-primary" id="btn">
+                  Leer más
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 d-flex align-items-stretch ">
+            <div class="card">
+              <img
+                src="./assets/JPEG/food.jpg"
+                class="card-img-top"
+                alt="..."
+                id="img-blog"
+              />
+              <div class="card-body">
+                <h5 class="card-title">
+                  <hr id="line-cards" />
+                  Dog Nutrition Basics - Essential Health Nutrients
+                </h5>
+                <h6 id="author">
+                  21 ENERO, 2020
+                  <li>Author.A</li>
+                </h6>
+                <p class="card-text">
+                  Your dog’s nutritional health depends on receiving the correct
+                  amounts and proportions of nutrients from the six required
+                  groups: ...
+                </p>
+                <a href="blog-example6.html" class="btn btn-primary" id="btn">
+                  Leer más
+                </a>
               </div>
             </div>
           </div>
         </div>
-
-        <div class="col-md-4 col-12 mb-2">
-          <div class="card-blog">
-            <a href="#">
-              <img src="./assets/PNG/new-03.png" class="card-img-top">
-            </a>
-            <div class="card-body">
-              <div class="title-card">
-                <div class="divider-left"></div>
-                <h3>Los perros gemelos se agotan</h3>
-              </div>
-              <div class="date-card">
-                <p>29/98/2020</p>
-                <p style="font-family: Assistant-Bold;color: #;">Autor. A</p>
-              </div>
-              <p class="card-text">
-                Faints contribution fifty specified appearing copyright reveal
-                side third. Supply contributors did incur but no...
-              </p>
-              <div class="d-flex justify-content-end">
-                <a href="./blog_example.html" class="btn btn-outline-primary">Leer más</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 col-12 mb-2">
-          <div class="card-blog">
-            <a href="#">
-              <img src="./assets/PNG/new-03.png" class="card-img-top">
-            </a>
-            <div class="card-body">
-              <div class="title-card">
-                <div class="divider-left"></div>
-                <h3>Los perros gemelos se agotan</h3>
-              </div>
-              <div class="date-card">
-                <p>29/98/2020</p>
-                <p style="font-family: Assistant-Bold;color: #;">Autor. A</p>
-              </div>
-              <p class="card-text">
-                Faints contribution fifty specified appearing copyright reveal
-                side third. Supply contributors did incur but no...
-              </p>
-              <div class="d-flex justify-content-end">
-                <a href="./blog_example.html" class="btn btn-outline-primary">Leer más</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 col-12 mb-2">
-          <div class="card-blog">
-            <a href="#">
-              <img src="./assets/PNG/new-03.png" class="card-img-top">
-            </a>
-            <div class="card-body">
-              <div class="title-card">
-                <div class="divider-left"></div>
-                <h3>Los perros gemelos se agotan</h3>
-              </div>
-              <div class="date-card">
-                <p>29/98/2020</p>
-                <p style="font-family: Assistant-Bold;color: #;">Autor. A</p>
-              </div>
-              <p class="card-text">
-                Faints contribution fifty specified appearing copyright reveal
-                side third. Supply contributors did incur but no...
-              </p>
-              <div class="d-flex justify-content-end">
-                <a href="./blog_example.html" class="btn btn-outline-primary">Leer más</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 col-12 mb-2">
-          <div class="card-blog">
-            <a href="#">
-              <img src="./assets/PNG/new-03.png" class="card-img-top">
-            </a>
-            <div class="card-body">
-              <div class="title-card">
-                <div class="divider-left"></div>
-                <h3>Los perros gemelos se agotan</h3>
-              </div>
-              <div class="date-card">
-                <p>29/98/2020</p>
-                <p style="font-family: Assistant-Bold;color: #;">Autor. A</p>
-              </div>
-              <p class="card-text">
-                Faints contribution fifty specified appearing copyright reveal
-                side third. Supply contributors did incur but no...
-              </p>
-              <div class="d-flex justify-content-end">
-                <a href="./blog_example.html" class="btn btn-outline-primary">Leer más</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 col-12 mb-2">
-          <div class="card-blog">
-            <a href="#">
-              <img src="./assets/PNG/new-03.png" class="card-img-top">
-            </a>
-            <div class="card-body">
-              <div class="title-card">
-                <div class="divider-left"></div>
-                <h3>Los perros gemelos se agotan</h3>
-              </div>
-              <div class="date-card">
-                <p>29/98/2020</p>
-                <p style="font-family: Assistant-Bold;color: #;">Autor. A</p>
-              </div>
-              <p class="card-text">
-                Faints contribution fifty specified appearing copyright reveal
-                side third. Supply contributors did incur but no...
-              </p>
-              <div class="d-flex justify-content-end">
-                <a href="./blog_example.html" class="btn btn-outline-primary">Leer más</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 col-12 mb-2">
-          <div class="card-blog">
-            <a href="#">
-              <img src="./assets/PNG/new-03.png" class="card-img-top">
-            </a>
-            <div class="card-body">
-              <div class="title-card">
-                <div class="divider-left"></div>
-                <h3>Los perros gemelos se agotan</h3>
-              </div>
-              <div class="date-card">
-                <p>29/98/2020</p>
-                <p style="font-family: Assistant-Bold;color: #;">Autor. A</p>
-              </div>
-              <p class="card-text">
-                Faints contribution fifty specified appearing copyright reveal
-                side third. Supply contributors did incur but no...
-              </p>
-              <div class="d-flex justify-content-end">
-                <a href="./blog_example.html" class="btn btn-outline-primary">Leer más</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 col-12 mb-2">
-          <div class="card-blog">
-            <a href="#">
-              <img src="./assets/PNG/new-03.png" class="card-img-top">
-            </a>
-            <div class="card-body">
-              <div class="title-card">
-                <div class="divider-left"></div>
-                <h3>Los perros gemelos se agotan</h3>
-              </div>
-              <div class="date-card">
-                <p>29/98/2020</p>
-                <p style="font-family: Assistant-Bold;color: #;">Autor. A</p>
-              </div>
-              <p class="card-text">
-                Faints contribution fifty specified appearing copyright reveal
-                side third. Supply contributors did incur but no...
-              </p>
-              <div class="d-flex justify-content-end">
-                <a href="./blog_example.html" class="btn btn-outline-primary">Leer más</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
 
@@ -275,12 +264,316 @@
         ®PET IT 2020 Reservados todos los derechos.
       </div>
     </footer>
-    
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"crossorigin="anonymous"></script>
-  <script src="./js/all.js"></script>
-  <script src="./js/bootstrap.min.js"></script>
-  <script src="./js/owl.carousel.js"></script>
-  <script src="./js/main.js"></script>
-</body>
+
+    <div
+      class="modal fade"
+      id="registerUser"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="registerUserLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <button
+            type="button"
+            class="close-modal"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <i class="fa fa-times"></i>
+          </button>
+          <div class="modal-title">
+            <h2>Crear una cuenta</h2>
+          </div>
+          <div class="modal-body">
+            <ul class="nav nav-tabs" id="myTabLogin" role="tablist">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  id="client-tab"
+                  data-toggle="tab"
+                  href="#client"
+                  role="tab"
+                  aria-controls="client"
+                  aria-selected="true"
+                  >Tengo una mascota</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  id="veterinarian-tab"
+                  data-toggle="tab"
+                  href="#veterinarian"
+                  role="tab"
+                  aria-controls="veterinarian"
+                  aria-selected="true"
+                  >Soy Veterinario</a
+                >
+              </li>
+            </ul>
+            <div class="tab-content" id="myTabRegisterUserLabel">
+              <form
+                method="POST"
+                action=""
+                class="tab-pane fade show active form"
+                id="client"
+                role="tabpanel"
+                aria-labelledby="client-tab"
+              >
+                <div class="form-group-icon">
+                  <input
+                    type="text"
+                    placeholder="Nombre"
+                    class="form-group-input"
+                    name=""
+                  />
+                  <i class="fa fa-user"></i>
+                </div>
+                <div class="form-group-icon">
+                  <input
+                    type="text"
+                    placeholder="Apellido"
+                    class="form-group-input"
+                    name=""
+                  />
+                  <i class="fa fa-user"></i>
+                </div>
+                <div class="form-group-icon">
+                  <input
+                    type="text"
+                    placeholder="Correo electrónico"
+                    class="form-group-input"
+                    name=""
+                  />
+                  <i class="fa fa-envelope"></i>
+                </div>
+                <div class="form-group-icon">
+                  <input
+                    type="password"
+                    placeholder="Escribe una contraseña"
+                    class="form-group-input"
+                    name=""
+                  />
+                  <i class="fa fa-key"></i>
+                </div>
+                <div class="form-group-icon">
+                  <input
+                    type="password"
+                    placeholder="Confirma tu contraseña"
+                    class="form-group-input"
+                    name=""
+                  />
+                  <i class="fa fa-key"></i>
+                </div>
+                <div class="form-checkbox ml-3 py-2">
+                  <input
+                    type="checkbox"
+                    class="input-checkbox"
+                    name=""
+                    id="termns"
+                  />
+                  <label for="terms">Acepto términos y condiciones</label>
+                </div>
+                <div class="d-flex flex-column ml-3 py-2">
+                  <a href="" class="link-arrows" target="_blank"
+                    ><i class="fa fa-book mr-1"></i
+                    ><span>Leer términos </span></a
+                  >
+                  <a href="" class="link-arrows" target="_blank"
+                    ><i class="fa fa-book mr-1"></i
+                    ><span>Leer condiciones </span></a
+                  >
+                </div>
+                <a
+                  href="client-pets.html"
+                  class="btn btn-outline-primary float-right mt-4 mb-2"
+                  id="btn_ingresar"
+                >
+                  Registrarse
+                </a>
+              </form>
+
+              <form
+                method="POST"
+                action=""
+                class="tab-pane fade form"
+                id="veterinarian"
+                role="tabpanel"
+                aria-labelledby="veterinarian-tab"
+              >
+                <div class="form-group-icon">
+                  <input
+                    type="text"
+                    placeholder="Nombre"
+                    class="form-group-input"
+                    name=""
+                  />
+                  <i class="fa fa-user"></i>
+                </div>
+                <div class="form-group-icon">
+                  <input
+                    type="text"
+                    placeholder="Apellido"
+                    class="form-group-input"
+                    name=""
+                  />
+                  <i class="fa fa-user"></i>
+                </div>
+                <div class="form-group-icon">
+                  <input
+                    type="text"
+                    placeholder="Correo electrónico"
+                    class="form-group-input"
+                    name=""
+                  />
+                  <i class="fa fa-envelope"></i>
+                </div>
+                <div class="form-group-icon">
+                  <input
+                    type="password"
+                    placeholder="Escribe una contraseña"
+                    class="form-group-input"
+                    name=""
+                  />
+                  <i class="fa fa-key"></i>
+                </div>
+                <div class="form-group-icon">
+                  <input
+                    type="password"
+                    placeholder="Confirma tu contraseña"
+                    class="form-group-input"
+                    name=""
+                  />
+                  <i class="fa fa-key"></i>
+                </div>
+                <div class="form-checkbox ml-3 py-2">
+                  <input
+                    type="checkbox"
+                    class="input-checkbox"
+                    name=""
+                    id="termns"
+                  />
+                  <label for="terms">Acepto términos y condiciones</label>
+                </div>
+                <div class="d-flex flex-column ml-3 py-2">
+                  <a href="" class="link-arrows" target="_blank"
+                    ><i class="fa fa-book mr-1"></i
+                    ><span>Leer términos </span></a
+                  >
+                  <a href="" class="link-arrows" target="_blank"
+                    ><i class="fa fa-book mr-1"></i
+                    ><span>Leer condiciones </span></a
+                  >
+                </div>
+                <a
+                  href="vet.html"
+                  class="btn btn-outline-primary float-right mt-4 mb-2"
+                  id="btn_ingresar"
+                >
+                  Registrarse
+                </a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="loginUser"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="loginUserLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <button
+            type="button"
+            class="close-modal"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <i class="fa fa-times"></i>
+          </button>
+          <div class="modal-title">
+            <h2>Ingreso al sitio</h2>
+          </div>
+
+          <div class="modal-body">
+            <ul class="nav nav-tabs" id="myTabLogin" role="tablist">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  id="home-tab"
+                  data-toggle="tab"
+                  href="#login"
+                  role="tab"
+                  aria-controls="home"
+                  aria-selected="true"
+                  >Ya estoy registrado</a
+                >
+              </li>
+            </ul>
+            <form method="POST" action="" class="form" autocomplete="off">
+              <div class="tab-content" id="myTabLoginContent">
+                <div
+                  clas="tab-pane fade show active"
+                  id="login"
+                  role="tabpanel"
+                  aria-labelledby="login-tab"
+                >
+                  <div class="form-group-icon">
+                    <input
+                      type="email"
+                      placeholder="Correo electrónico"
+                      class="form-group-input"
+                      name=""
+                    />
+                    <i class="fa fa-envelope"></i>
+                  </div>
+                  <div class="form-group-icon">
+                    <input
+                      type="password"
+                      placeholder="Contraseña"
+                      class="form-group-input"
+                      name=""
+                    />
+                    <i class="fa fa-key"></i>
+                  </div>
+                </div>
+              </div>
+              <a
+                href="index.html"
+                class="btn btn-outline-primary float-right mt-4 mb-2"
+                id="btn_ingresar"
+              >
+                Ingresar
+              </a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/all.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/owl.carousel.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
 </html>
+
+<!--<?php include "./footer.html" ?>Se manda llamara la pagina de footer mediante php-->
