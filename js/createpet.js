@@ -43,22 +43,3 @@ function createPet(){
     }
   });
 }
-
-function cleanTable(){
-  $('#pet_name').empty()
-  $('#pet_gender').empty()
-  $('#pet_breed').empty()
-  $('#pet_color').empty()
-  $('#pet_birthday').empty()
-  $('#pet_weight').empty()
-  $('#pet_blood_type').empty()
-  $('#pet_chars').empty()
-  //$('').empty()
-  $('#client_name').empty()
-  $('#vet_name').empty()
-
-}
-
-$(document).ready(function() {
-  cleanTable();
-});

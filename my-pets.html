@@ -7,36 +7,58 @@
     <script src="https://kit.fontawesome.com/6be6db9500.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="./js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.js"></script>
     <script src="./js/admin.js"> </script>
     <link rel="shortcut icon" href="./assets/icono-petit.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.css">
     <link rel="stylesheet" href="./css/admin.css" type="text/css">
+    <script src="./js/mypets.js"> </script>
     <title>Mi Tablero</title>
   </head>
   <body>
-    <nav class="navbar navbar-white navbar-expand-md">
-      <div class="container">
-        <div class="d-flex justify-content-between">
-          <a href="./panel.html">
-            <img src="./assets/SVG/logo-petit.svg" class="logo-img"  alt="logo-website">
-          </a>
-        </div>
-        <div class="dropdown">
-          <button class="btn-profile" data-toggle="dropdown">
-            <img src="./assets/JPEG/perrito.jpg" alt="avatar" class="img-profile rounded-circle">
-            <p class="px-2 pt-3" style="font-family: Assistant-Bold;">Nombre Usuario</p>
-            <i class="fa fa-chevron-down mx-2"></i>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="./update-user.html"><i class="fas fa-user-edit mr-2"></i>Editar Perfil</a>
-              <a class="dropdown-item" href="./index.html"><i class="fas fa-sign-out-alt mr-2"></i>Cerrar Sesión</a>
-            </div>
+    <nav class="navbar navbar-petit navbar-expand-md" id="navbarPetit_blog">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"
+            ><img src="./assets/SVG/logo-petit.svg" width="100px"
+          /></a>
+          <button
+            id="font-menu"
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSignup"
+            aria-controls="navbarSignup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            Menú<i class="fa fa-bars ml-2"></i>
           </button>
+          <div class="collapse navbar-collapse" id="navbarSignup">
+            <ul class="navbar-nav ml-auto" id="options">
+              <li class="nav-item dropdown" id="btn-ingresar">
+                <a
+                  class="btn btn-inicio dropdown-toggle"
+                  role="button"
+                  id="signUp"
+                  data-toggle="dropdown"
+                  href="#"
+                  >Opciones</a
+                >
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="./update-user.html"
+                    ><i class="fas fa-user-edit mr-2"></i>Editar Perfil</a
+                  >
+                  <a class="dropdown-item" href="./index.html"
+                    ><i class="fas fa-sign-out-alt mr-2"></i>Cerrar Sesión</a
+                  >
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
     <div class="breadcrumb-petit">
       <ol class="breadcrumb-mi-tablero">
         <li class="breadcrumb-item mi-tablero-item"><a href="./my-pets.html">Mi Tablero</a></li>
@@ -44,7 +66,7 @@
       </ol>
     </div>
     <!-- Termina menú -->
-    <script src="./js/mypets.js"> </script>
+
     <div class="container my-4">
       <section><!--Toda la parte que contien lo relacionado a la catilla digital-->
         <div class="row"><!--renglón del titulo de la pagina-->
