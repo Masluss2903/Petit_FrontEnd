@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="./js/all.js"></script>
+    <script
+      src="https://kit.fontawesome.com/6be6db9500.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.js"></script>
+    <script src="./js/admin.js"></script>
+    <link
+      rel="shortcut icon"
+      href="./assets/icono-petit.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.css"
+    />
+    <link rel="stylesheet" href="./css/admin.css" type="text/css" />
+    <link rel="stylesheet" href="./css/uploadImage.css" />
+    <title>Editar Perfil</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-petit navbar-expand-md" id="navbarPetit_blog">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"
+          ><img src="./assets/SVG/logo-petit.svg" width="100px"
+        /></a>
+        <button
+          id="font-menu"
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSignup"
+          aria-controls="navbarSignup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          Menú<i class="fa fa-bars ml-2"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSignup">
+          <ul class="navbar-nav ml-auto" id="options">
+            <li class="nav-item dropdown" id="btn-ingresar">
+              <a
+                class="btn btn-inicio dropdown-toggle"
+                role="button"
+                id="signUp"
+                data-toggle="dropdown"
+                href="#"
+                >Opciones</a
+              >
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="./update-vet.html"
+                  ><i class="fas fa-user-edit mr-2"></i>Editar Perfil</a
+                >
+                <a class="dropdown-item" href="./index.html"
+                  ><i class="fas fa-sign-out-alt mr-2"></i>Cerrar Sesión</a
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="breadcrumb-petit">
+      <ol class="breadcrumb-mi-tablero">
+        <li class="breadcrumb-item mi-tablero-item">
+          <a href="./vet.html">Mi Tablero</a>
+        </li>
+        <li class="breadcrumb-item mi-tablero-item active">
+          <a href="./update-vet.html">Editar mi perfil</a>
+        </li>
+      </ol>
+    </div>
+    <!-- Aquí termina el header, agregado durante migración -->
+
+    <div class="container py-4">
+      <div class="row">
+        <!--renglón del titulo de la pagina-->
+        <div class="col-12">
+          <!--columna del titulo de la pagina-->
+          <h1 class="title">EDITAR MI PERFIL</h1>
+        </div>
+        <!-- termina columna del titulo de la pagina-->
+      </div>
+      <!--termina renglón del titulo de la pagina y boton de imprimir-->
+
+      <div class="col">
+        <div class="row">
+          <div class="col mb-3">
+            <div class="card">
+              <div class="card-body">
+                <div class="e-profile">
+                  <div class="row">
+                    <div class="col-12 col-sm-auto mb-3">
+                      <div class="mx-auto" style="width: 140px;">
+                        <img src="./assets/PNG/veterinario.png" id="img-vet" />
+                      </div>
+                    </div>
+                    <div
+                      class="col d-flex flex-column flex-sm-row justify-content-between mb-3"
+                    >
+                      <div class="text-center text-sm-left mb-2 mb-sm-0">
+                        <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">
+                          Veterinario Jonathan Acosta
+                        </h4>
+                        <p class="mb-0">@johnny.a</p>
+                        <div class="mt-2">
+                          <button
+                            class="btn btn-primary"
+                            type="button"
+                            id="change-photo"
+                          >
+                            <i class="fa fa-fw fa-camera"></i>
+                            <span>Cambiar foto</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                      <a href="vet.html" class="active nav-link">Tu perfil</a>
+                    </li>
+                  </ul>
+                  <div class="tab-content pt-3">
+                    <div class="tab-pane active">
+                      <form class="form" novalidate="">
+                        <div class="row">
+                          <div class="col">
+                            <div class="row">
+                              <div class="col">
+                                <div class="form-group">
+                                  <label>Nombre</label>
+                                  <input
+                                    class="form-control"
+                                    type="text"
+                                    name="name-vet"
+                                    id="name-vet"
+                                    placeholder="Ej: Jonathan Acosta"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col">
+                                <div class="form-group">
+                                  <label>Username</label>
+                                  <input
+                                    class="form-control"
+                                    type="text"
+                                    name="username-vet"
+                                    id="username-vet"
+                                    placeholder="Ej: johnny.a"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col">
+                                <div class="form-group">
+                                  <label>Email</label>
+                                  <input
+                                    class="form-control"
+                                    type="text"
+                                    name="email-vet"
+                                    placeholder="user@example.com"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col mb-3">
+                                <div class="form-group">
+                                  <label>Descripción</label>
+                                  <textarea
+                                    class="form-control"
+                                    rows="5"
+                                    name="description-vet"
+                                    id="description-vet"
+                                    placeholder="Tengo 13 años de experiencia trabajando con perritos y me especializo en las razas grandes..."
+                                  ></textarea>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-12 col-sm-6 mb-3">
+                            <div class="mb-2"><b>Edita tu contraseña</b></div>
+                            <div class="row">
+                              <div class="col">
+                                <div class="form-group">
+                                  <label>Contraseña anterior</label>
+                                  <input
+                                    class="form-control"
+                                    type="password"
+                                    name="password-vet"
+                                    placeholder="••••••"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col">
+                                <div class="form-group">
+                                  <label>Nueva contraseña</label>
+                                  <input
+                                    class="form-control"
+                                    type="password"
+                                    name="new-password-vet"
+                                    placeholder="••••••"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col">
+                                <div class="form-group">
+                                  <label
+                                    >Confirma tu contraseña
+                                    <span class="d-none d-xl-inline"
+                                      >Password</span
+                                    ></label
+                                  >
+                                  <input
+                                    class="form-control"
+                                    type="password"
+                                    placeholder="••••••"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-5 offset-sm-1 mb-4">
+                            <div class="mb-2"><b>Tus servicios</b></div>
+                            <div class="row">
+                              <div class="col">
+                                <div class="custom-controls-stacked px-2">
+                                  <div class="custom-control custom-checkbox">
+                                    <input
+                                      type="checkbox"
+                                      class="custom-control-input"
+                                      id="notifications-address"
+                                    />
+                                    <label
+                                      class="custom-control-label"
+                                      for="notifications-address"
+                                      >Servicio a domicilio</label
+                                    >
+                                  </div>
+                                  <div class="custom-control custom-checkbox">
+                                    <input
+                                      type="checkbox"
+                                      class="custom-control-input"
+                                      id="notifications-appointment"
+                                      checked=""
+                                    />
+                                    <label
+                                      class="custom-control-label"
+                                      for="notifications-appointment"
+                                      >Consulta</label
+                                    >
+                                  </div>
+                                  <div class="custom-control custom-checkbox">
+                                    <input
+                                      type="checkbox"
+                                      class="custom-control-input"
+                                      id="notifications-surgery"
+                                      checked=""
+                                    />
+                                    <label
+                                      class="custom-control-label"
+                                      for="notifications-surgery"
+                                      >Cirugía</label
+                                    >
+                                  </div>
+                                  <div class="custom-control custom-checkbox">
+                                    <input
+                                      type="checkbox"
+                                      class="custom-control-input"
+                                      id="notifications-dog-grooming"
+                                    />
+                                    <label
+                                      class="custom-control-label"
+                                      for="notifications-dog-grooming"
+                                      >Estética</label
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col d-flex justify-content-end">
+                            <button
+                              class="btn btn-primary"
+                              type="submit"
+                              id="save-changes"
+                            >
+                              Save Changes
+                            </button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/pet-photo.js"></script>
+    <script src="./js/dogBreedAPI.js"></script>
+    <script src="./js/simple-select.js"></script>
+    <!-- Aquí termina cuerpo de la vista e inicia footer, agregado durante migración -->
+    <footer class="footer">
+      <ul class="footer-links">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Aviso de privacidad</a></li>
+        <li><a href="#">Términos y Condiciones</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+      <div class="social-media">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+      <div class="footer-brand">
+        ®PET IT 2020 Reservados todos los derechos.
+      </div>
+    </footer>
+  </body>
+</html>

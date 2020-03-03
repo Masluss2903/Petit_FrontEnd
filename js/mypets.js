@@ -29,7 +29,7 @@ function petButtonVaccines(value){
 }
 
 function petCalendarButton(value){
-  var calendarBtn = '<button type="button" onclick="window.location.href =\'/calendario.html?petId=' + value + '\';" class="btn btn-outline-primary calendarBtn">VER   <i class="fas fa-eye"></i></button>'
+  var calendarBtn = '<button type="button" onclick="window.location.href =\'/calendar.html?petId=' + value + '\';" class="btn btn-outline-primary calendarBtn">VER   <i class="fas fa-eye"></i></button>'
   return calendarBtn;
 }
 

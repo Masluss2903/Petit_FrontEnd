@@ -221,16 +221,15 @@ body {
   border-radius: 0;
   padding: 0;
 }
-.navbar-petit .dropdown-item{
+.navbar-petit .dropdown-item {
   cursor: pointer;
   margin: 0;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
 }
 .navbar-petit .dropdown-item:hover,
 .navbar-petit .dropdown-item:focus {
-  color: var(--yellow);
+  color: var(--primary);
   text-decoration: none;
-  background-color: var(--primary);
 }
 .navbar-petit .btn-signup {
   color: var(--primary);
@@ -515,7 +514,7 @@ span.img-text:hover {
   background: var(--secondary);
 }
 /*section blog*/
-.title-blog{
+.title-blog {
   width: max-content;
   font-family: Assistant-Bold;
   color: var(--primary);
@@ -897,4 +896,409 @@ p {
     left: -25px;
     font-size: 1.5rem;
   }
+}
+/* Estilos Blog */
+#navbarPetit_blog {
+  position: static;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  background: white;
+}
+#navbarPetit_blog ul li a {
+  color: var(--primary);
+  margin: 0 5px;
+  font-size: 1rem;
+  transition: 0.3s ease-in-out;
+}
+
+.card {
+  margin-top: 15px;
+  border: 15px;
+}
+.card img {
+  border-radius: 15px;
+}
+.card h5 {
+  font-family: HeadingPro-Bold;
+  src: url(./fonts/Heading-Pro-Bold-trial.woff);
+  font-size: xx-large;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+#author {
+  font-family: Assistant-Bold;
+  src: url(./fonts/Assistant-Bold.woff);
+}
+#author li {
+  float: right;
+  list-style-type: none;
+  font-family: HeadingPro-Regular;
+  src: url(./fonts/Heading-Pro-Book-trial.woff);
+  font-size: medium;
+}
+h6 {
+  font-family: HeadingPro-Regular;
+  src: url(./fonts/Heading-Pro-Book-trial.woff);
+  font-size: small;
+  text-transform: uppercase;
+}
+#author li::before {
+  content: "■";
+  position: absolute;
+  right: 81px;
+  font-size: 1.1em;
+}
+.btn-primary {
+  color: var(--primary);
+  border: 0.1rem solid var(--primary);
+  background-color: white;
+  font-family: HeadingPro-Bold;
+  src: url(./fonts/Heading-Pro-Bold-trial.woff);
+}
+.card-text {
+  font-family: Assistant-Regukar;
+  src: url(./fonts/Assistant-Regular.woff);
+  font-size: large;
+}
+
+#line-title {
+  color: var(--yellow);
+  width: 150px;
+  margin-left: 50px;
+  margin-top: 0px;
+  background-color: var(--yellow);
+  height: 2px;
+  position: relative;
+}
+#line-cards {
+  color: var(--yellow);
+  width: 100px;
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-color: var(--yellow);
+  height: 2px;
+  position: relative;
+}
+
+#font-menu {
+  font-family: HeadingPro-Regular;
+  src: url(./fonts/Heading-Pro-Book-trial.woff);
+}
+.footer-copyright {
+  width: 100%;
+  height: auto;
+  padding: 0.5rem 0;
+  text-align: center;
+  color: var(--white);
+  background: rgba(0, 0, 0, 0.2);
+  font-family: Assistant-Regukar;
+  src: url(./fonts/Assistant-Regular.woff);
+}
+#options {
+  font-family: Assistant-Bold;
+  src: url(./fonts/Assistant-Bold.woff);
+}
+#btn-ingresar .btn-inicio {
+  font-family: Assistant-Regukar;
+  src: url(./fonts/Assistant-Regular.woff);
+  color: var(--primary);
+  border: 0.1rem solid var(--primary);
+}
+
+#title {
+  font-family: Assistant-Bold;
+  src: url(./fonts/Assistant-Bold.woff);
+  color: var(--primary);
+  padding-top: 10px;
+  padding-left: 50px;
+}
+
+#btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+#btn:hover {
+  background-color: var(--primary);
+  color: var(--yellow);
+  border-color: var(--primary);
+}
+#first {
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+/* Estilo blog-example */
+
+#title-example {
+  font-family: Assistant-Bold;
+  src: url(./fonts/Assistant-Bold.woff);
+  position: relative;
+  color: var(--primary);
+  text-transform: uppercase;
+}
+#img-blog {
+  height: 55%;
+  width: 100%;
+}
+
+#line-title-example {
+  color: var(--yellow);
+  margin-left: 0px;
+  margin-top: 0px;
+  background-color: var(--yellow);
+  height: 2px;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+#link-blogs:hover {
+  color: var(--primary);
+}
+
+#line-lastnews {
+  color: var(--yellow);
+  background-color: var(--yellow);
+  height: 2px;
+  margin-left: 0px;
+}
+
+#last-news {
+  font-family: Assistant-Bold;
+  src: url(./fonts/Assistant-Bold.woff);
+  color: var(--primary);
+  text-transform: uppercase;
+  padding-top: 10px;
+}
+
+#down {
+  position: relative;
+  margin-top: 200px;
+}
+
+#resume {
+  padding-top: 10px;
+  text-align: justify;
+  font-size: small;
+  src: url(./fonts/Heading-Pro-Book-trial.woff);
+}
+
+#text-example {
+  font-family: Assistant-Regular;
+  src: url(./fonts/Assistant-Regular.woff);
+  text-align: justify;
+  font-size: medium;
+}
+
+#title {
+  font-family: Assistant-Bold;
+  src: url(./fonts/Assistant-Bold.woff);
+  text-transform: uppercase;
+  text-align: left;
+}
+
+#author-example {
+  font-family: HeadingPro-Regular;
+  src: url(./fonts/Heading-Pro-Book-trial.woff);
+  font-size: medium;
+}
+#author-example li {
+  float: right;
+  list-style-type: none;
+  font-family: Assistant-Bold;
+  src: url(./fonts/Assistant-Bold.woff);
+  font-size: small;
+}
+p {
+  text-align: justify;
+}
+#bold {
+  font-weight: bold;
+}
+#bold-and-italics {
+  font-weight: bold;
+  margin-left: 20px;
+  font-style: italic;
+}
+#photo {
+  padding-bottom: 10px;
+}
+.icons-blog {
+  width: 25px;
+  height: 25px;
+  columns: 4;
+  display: block;
+  margin-top: 5px;
+}
+
+#facebook-blog {
+  color: var(--yellow);
+}
+
+/* Estilo header pagina veterinario */
+#nav-edit:hover {
+  color: var(--primary);
+  background-color: white;
+  border: 0.1rem solid var(--primary);
+}
+
+#signUp:hover {
+  border: 0.1rem solid var(--primary);
+  color: var(--yellow);
+  background-color: var(--primary);
+}
+#img-vet {
+  width: 140px;
+}
+#change-photo:hover,
+#save-changes:hover {
+  color: white;
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+/* vet page CSS */
+.emp-profile {
+  padding: 3%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  border-radius: 0.5rem;
+  background: #fff;
+}
+.profile-img {
+  text-align: center;
+}
+.profile-img img {
+  width: 70%;
+  height: 100%;
+}
+.profile-img .file {
+  position: relative;
+  overflow: hidden;
+  margin-top: -20%;
+  width: 70%;
+  border: none;
+  border-radius: 0;
+  font-size: 15px;
+  background: #212529b8;
+}
+.profile-img .file input {
+  position: absolute;
+  opacity: 0;
+  right: 0;
+  top: 0;
+}
+.profile-head h5 {
+  color: #333;
+}
+.profile-head h6 {
+  color: #0062cc;
+}
+.profile-edit-btn {
+  border: none;
+  border-radius: 1.5rem;
+  width: 70%;
+  padding: 2%;
+  font-weight: 600;
+  color: #6c757d;
+  cursor: pointer;
+}
+
+.proile-rating span {
+  color: #495057;
+  font-size: 15px;
+  font-weight: 600;
+}
+.profile-head .nav-tabs {
+  margin-bottom: 5%;
+}
+.profile-head .nav-tabs .nav-link {
+  font-weight: 600;
+  border: none;
+}
+.profile-head .nav-tabs .nav-link.active {
+  border: none;
+  border-bottom: 2px solid #0062cc;
+}
+.profile-work {
+  padding: 14%;
+  margin-top: -15%;
+}
+.profile-work p {
+  font-size: 12px;
+  color: #818182;
+  font-weight: 600;
+  margin-top: 10%;
+}
+.profile-work a {
+  text-decoration: none;
+  color: #495057;
+  font-weight: 600;
+  font-size: 14px;
+}
+/* Vet page */
+#access1 {
+  margin-top: 80px;
+  margin-bottom: 5px;
+  background-color: white;
+  color: var(--primary);
+  border-color: var(--primary);
+}
+/* #access1,
+#access2,
+#access3 {
+  width: 150px;
+  height: 50px;
+} */
+
+#access1:hover,
+#access2:hover,
+#access3:hover,
+#btn-edit:hover {
+  background-color: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+#access2,
+#access3 {
+  margin-bottom: 5px;
+  background-color: white;
+  color: var(--primary);
+  border-color: var(--primary);
+}
+#access2,
+#access3,
+#access1 {
+  margin-left: 10px;
+}
+#calendar {
+  width: 10px;
+}
+#card-vet {
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+}
+#image-vet {
+  width: 400px;
+  height: auto;
+}
+#btn-edit {
+  background-color: white;
+  color: var(--primary);
+  border-color: var(--primary);
+}
+#information {
+  margin: 0px;
+  padding: 0px;
+}
+/* Estilo blog en index */
+#size {
+  width: 85%;
+  height: 200%;
 }
