@@ -33,7 +33,7 @@ function createPet(){
 
 
   $.ajax({
-    url:"http://localhost:8080/pet/",
+    url:"https://petit-kjuxhuxmaq-uc.a.run.app/pet/",
     type: "POST",
     data: JSON.stringify(mascota),
     contentType:"application/json; charset=utf-8",
