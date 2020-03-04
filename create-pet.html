@@ -92,12 +92,14 @@
                 <div class="row">
                     <label for="pet_gender" class="col-md-2 col-12 form-label-pet">GENERO:</label>
                     <div class="col-md-10 col-12">
-                        <select name="pet_gender" id="pet_gender" required">
-                            <option value="default" selected>Selecciona el sexo de la mascota</option>
-                            <option value="1">Macho</option>
-                            <option value="2">Hembra</option>
-                        </select>
-                        <div class="invalid-feedback">prueba</div>
+                        <div class="form-group-icon">
+                            <select class="form-group-input" name="pet_gender" id="pet_gender" required">
+                                <option value="default" selected>Selecciona el sexo de la mascota</option>
+                                <option value="1">Macho</option>
+                                <option value="2">Hembra</option>
+                            </select>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -106,10 +108,11 @@
                 <div class="row">
                     <label for="pet_breed" class="col-md-2 col-12 form-label-pet">RAZA:</label>
                     <div class="col-md-10 col-12">
-                        <select name="pet_breed" id="pet_breed" onchange="changeDoggo(this)" required>
-                            <option value="">Selecciona su raza</option>
-                        </select>
-                        <div class="invalid-feedback">prueba</div>
+                        <div class="form-group-icon">
+                            <select class="pet_breed form-group-input" name="pet_breed" id="pet_breed" onchange="changeDoggo(this)" required>
+                                <option value="">Selecciona su raza</option>
+                            </select>
+                         </div>
                     </div>
                 </div>
             </div>
@@ -118,15 +121,16 @@
                 <div class="row">
                     <label for="pet_color" class="col-md-2 col-12 form-label-pet">COLOR:</label>
                     <div class="col-md-10 col-12">
-                        <select name="pet_color" id="pet_color" required>
-                            <option value="">Seleccione su color</option>
-                            <option value="blanco">Blanco</option>
-                            <option value="negro">Negro</option>
-                            <option value="cafe">Café</option>
-                            <option value="crema">Crema</option>
-                            <option value="gris">Gris</option>
-                        </select>
-                        <div class="invalid-feedback">prueba</div>
+                        <div class="form-group-icon">
+                            <select class="form-group-input" name="pet_color" id="pet_color" required>
+                                <option value="">Seleccione su color</option>
+                                <option value="blanco">Blanco</option>
+                                <option value="negro">Negro</option>
+                                <option value="cafe">Café</option>
+                                <option value="crema">Crema</option>
+                                <option value="gris">Gris</option>
+                            </select>    
+                        </div>
                     </div>
                 </div>
             </div>
@@ -135,7 +139,9 @@
                 <div class="row">
                     <label for="pet_birthday" class="col-md-2 col-12 form-label-pet">CUMPLEAÑOS:</label>
                     <div class="col-md-10 col-12">
-                        <input type="date" class="form-input-date" name="pet_birthday" id="pet_birthday" placeholder="Fecha de nacimiento" aria-label="pet_birthday" aria-describedby="basic-addon1" required>
+                        <div class="form-group-icon">
+                            <input type="date" class="form-input-date" name="pet_birthday" id="pet_birthday" placeholder="Fecha de nacimiento" aria-label="pet_birthday" aria-describedby="basic-addon1" required>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -156,18 +162,19 @@
                 <div class="row">
                     <label for="pet_blood_type" class="col-md-2 col-12 form-label-pet">TIPO DE SANGRE:</label>
                     <div class="col-md-10 col-12">
-                        <select name="pet_blood_type" id="pet_blood_type" required>
-                            <option value="default">Seleccione el tipo de sangre de la mascota</option>
-                            <option value="DEA-1.1 (A1)">DEA-1.1 (A1)</option>
-                            <option value="DEA-1.2 (A2)">DEA-1.2 (A2)</option>
-                            <option value="DEA-3 (B)">DEA-3 (B)</option>
-                            <option value="DEA-4 (C)">DEA-4 (C)</option>
-                            <option value="DEA-5 (D)">DEA-5 (D)</option>
-                            <option value="DEA-6 (F)">DEA-6 (F)</option>
-                            <option value="DEA-7 (Tr)">DEA-7 (Tr)</option>
-                            <option value="DEA-8 (He)">DEA-8 (He)</option>
-                        </select>
-                        <div class="invalid-feedback">prueba</div>
+                        <div class="form-group-icon">
+                            <select class="form-group-input" name="pet_blood_type" id="pet_blood_type" required>
+                                <option value="default">Seleccione el tipo de sangre de la mascota</option>
+                                <option value="DEA-1.1 (A1)">DEA-1.1 (A1)</option>
+                                <option value="DEA-1.2 (A2)">DEA-1.2 (A2)</option>
+                                <option value="DEA-3 (B)">DEA-3 (B)</option>
+                                <option value="DEA-4 (C)">DEA-4 (C)</option>
+                                <option value="DEA-5 (D)">DEA-5 (D)</option>
+                                <option value="DEA-6 (F)">DEA-6 (F)</option>
+                                <option value="DEA-7 (Tr)">DEA-7 (Tr)</option>
+                                <option value="DEA-8 (He)">DEA-8 (He)</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -214,7 +221,11 @@
     <script src="./js/pet-photo.js"></script>
     <script src="./js/dogBreedAPI.js"></script>
     <script src="./js/uploadImage.js"></script>
-    <script src="./js/simple-select.js"></script>
+
+
+    <!-- script agregado por Yun, funcionamiento por definir, se comenta para reactivar API de razas de perros -->
+    <!-- <script src="./js/simple-select.js"></script> -->
+    
     <!-- Aquí termina cuerpo de la vista e inicia footer, agregado durante migración -->
     <footer class="footer">
         <ul class="footer-links">
