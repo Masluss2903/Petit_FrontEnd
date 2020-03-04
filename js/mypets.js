@@ -24,24 +24,24 @@
 
 
 function petButtonVaccines(value){
-  var btnVaccines = '<button type="button" onclick="window.location.href =\'/index.html?petId=' + value + '\';" class="btn btn-outline-primary btnVaccines">VER  <i class="fas fa-eye"></i> </button>'
+  var btnVaccines = '<button type="button" onclick="window.location.href =\'./index.html?petId=' + value + '\';" class="btn btn-outline-primary btnVaccines">VER  <i class="fas fa-eye"></i> </button>'
   return btnVaccines;
 }
 
 function petCalendarButton(value){
-  var calendarBtn = '<button type="button" onclick="window.location.href =\'/calendar.html?petId=' + value + '\';" class="btn btn-outline-primary calendarBtn">VER   <i class="fas fa-eye"></i></button>'
+  var calendarBtn = '<button type="button" onclick="window.location.href =\'./calendar.html?petId=' + value + '\';" class="btn btn-outline-primary calendarBtn">VER   <i class="fas fa-eye"></i></button>'
   return calendarBtn;
 }
 
 function petTwoBtns(value){
-  var cartillaBtn = '<button type="button" onclick="window.location.href =\'/book-pet.html?petId=' + value + '\';" class="btn btn-outline-primary cartilla">CARTILLA <i class="fas fa-eye"></i></button>'
+  var cartillaBtn = '<button type="button" onclick="window.location.href =\'./book-pet.html?petId=' + value + '\';" class="btn btn-outline-primary cartilla">CARTILLA <i class="fas fa-eye"></i></button>'
   //var deleteBtn = '<button type="button" onclick="window.location.href =\'/index.html?petId=' + value + '\';" class="btn btn-outline-danger deleteBtn"><i class="fas fa-trash-alt"></i></button>'
   return cartillaBtn;
 }
 
 function petThreeBtns(value){
-  var cartillaBtn = '<button type="button" onclick="window.location.href =\'/book-pet.html?petId=' + value + '\';" class="btn btn-outline-success cartillaBtn"><i class="fas fa-eye"></i></button>'
-  var updateBtn = '<button type="button" onclick="window.location.href =\'/update-pet.html?petId=' + value + '\';" class="btn btn-outline-primary updateBtn"><i class="fas fa-edit"></i></button>'
+  var cartillaBtn = '<button type="button" onclick="window.location.href =\'./book-pet.html?petId=' + value + '\';" class="btn btn-outline-success cartillaBtn"><i class="fas fa-eye"></i></button>'
+  var updateBtn = '<button type="button" onclick="window.location.href =\'./update-pet.html?petId=' + value + '\';" class="btn btn-outline-primary updateBtn"><i class="fas fa-edit"></i></button>'
   //var deleteBtn = '<button type="button" onclick="window.location.href =\'/index.html?petId=' + value + '\';" class="btn btn-outline-danger deleteBtn"><i class="fas fa-trash-alt"></i></button>'
   return cartillaBtn + updateBtn;
 }
@@ -57,7 +57,7 @@ $(document).ready(function() {
 
 function llenarTabla() {
   $.ajax({
-    url:"http://localhost:8080/pet/"
+    url:"https://petit-kjuxhuxmaq-uc.a.run.app/pet/"
   }).then(function(datoscartilla){
     $('#pets').bootstrapTable({data:datoscartilla})
   });

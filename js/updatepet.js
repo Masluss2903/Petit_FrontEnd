@@ -49,7 +49,7 @@ function updatePet(){
 
 
   $.ajax({
-    url:"http://localhost:8080/pet/" + petId,
+    url:"https://petit-kjuxhuxmaq-uc.a.run.app/pet/" + petId,
     type: "PUT",
     data: JSON.stringify(mascota),
     contentType:"application/json; charset=utf-8",

@@ -53,7 +53,7 @@ $(document).ready(function() {
 
 function llenarInfo(petId) {
   $.ajax({
-    url:"http://localhost:8080/pet/" + petId
+    url:"https://petit-kjuxhuxmaq-uc.a.run.app/pet/" + petId
   }).then(function(datoscartilla){
     setLabelText('#petName', datoscartilla.petName)
     setLabelText('#petGender', datoscartilla.petGender)
