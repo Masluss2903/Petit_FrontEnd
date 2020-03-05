@@ -7,7 +7,7 @@
     <script src="https://kit.fontawesome.com/6be6db9500.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="./js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.js"></script>
     <script src="./js/admin.js"> </script>
     <link rel="shortcut icon" href="./assets/icono-petit.png" type="image/x-icon">
@@ -15,63 +15,62 @@
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.css">
     <link rel="stylesheet" href="./css/admin.css" type="text/css">
     <link rel="stylesheet" href="./css/uploadImage.css">
+    <script src="./js/updatepet.js"></script>
     <title>Mi Tablero</title>
   </head>
   <body>
     <nav class="navbar navbar-petit navbar-expand-md" id="navbarPetit_blog">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"
-            ><img src="./assets/SVG/logo-petit.svg" width="100px"
-          /></a>
-          <button
-            id="font-menu"
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarSignup"
-            aria-controls="navbarSignup"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            Menú<i class="fa fa-bars ml-2"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSignup">
-            <ul class="navbar-nav ml-auto" id="options">
-              <li class="nav-item dropdown" id="btn-ingresar">
-                <a
-                  class="btn btn-inicio dropdown-toggle"
-                  role="button"
-                  id="signUp"
-                  data-toggle="dropdown"
-                  href="#"
-                  >Opciones</a
-                >
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="./update-user.html"
-                    ><i class="fas fa-user-edit mr-2"></i>Editar Perfil</a
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"
+              ><img src="./assets/SVG/logo-petit.svg" width="100px"
+            /></a>
+            <button
+              id="font-menu"
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSignup"
+              aria-controls="navbarSignup"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              Menú<i class="fa fa-bars ml-2"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSignup">
+              <ul class="navbar-nav ml-auto" id="options">
+                <li class="nav-item dropdown" id="btn-ingresar">
+                  <a
+                    class="btn btn-inicio dropdown-toggle"
+                    role="button"
+                    id="signUp"
+                    data-toggle="dropdown"
+                    href="#"
+                    >Opciones</a
                   >
-                  <a class="dropdown-item" href="./index.html"
-                    ><i class="fas fa-sign-out-alt mr-2"></i>Cerrar Sesión</a
-                  >
-                </div>
-              </li>
-            </ul>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="./update-pet.html"
+                      ><i class="fas fa-user-edit mr-2"></i>Editar Perfil</a
+                    >
+                    <a class="dropdown-item" href="./index.html"
+                      ><i class="fas fa-sign-out-alt mr-2"></i>Cerrar Sesión</a
+                    >
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </nav>
-  
+        </nav>
     <div class="breadcrumb-petit">
     <ol class="breadcrumb-mi-tablero">
-        <li class="breadcrumb-item mi-tablero-item"><a href="./my-pets.html">Mi Tablero</a></li>
-        <li class="breadcrumb-item mi-tablero-item active"><a href="./update-pet.html">Editar Mascota</a></li>
+        <li class="breadcrumb-item mi-tablero-item"><a href="./my-patients.html">Mi Tablero</a></li>
+        <li class="breadcrumb-item mi-tablero-item active"><a href="./update-pet.html">Actualizar</a></li>
     </ol>
     </div>
     <!-- Aquí termina el header, agregado durante migración -->
-
     <div class="container py-4">
         <div class="row"><!--renglón del titulo de la pagina-->
             <div class="col-12"><!--columna del titulo de la pagina-->
-                <h1 class="title">EDITAR MI MASCOTA</h1>
+                <h1 class="title">NUEVA MASCOTA</h1>
             </div><!-- termina columna del titulo de la pagina-->
         </div><!--termina renglón del titulo de la pagina y boton de imprimir-->
 
@@ -93,14 +92,12 @@
                 <div class="row">
                     <label for="pet_gender" class="col-md-2 col-12 form-label-pet">GENERO:</label>
                     <div class="col-md-10 col-12">
-                        <div class="form-group-icon">
-                            <select class="form-group-input" name="pet_gender" id="pet_gender" required">
-                                <option value="default" selected>Selecciona el sexo de la mascota</option>
-                                <option value="1">Macho</option>
-                                <option value="2">Hembra</option>
-                            </select>
-                        </div>
-                        
+                        <select name="pet_gender" id="pet_gender" required>
+                            <option value="default" selected>Selecciona el sexo de la mascota</option>
+                            <option value="Macho">Macho</option>
+                            <option value="Hembra">Hembra</option>
+                        </select>
+                        <div class="invalid-feedback">prueba</div>
                     </div>
                 </div>
             </div>
@@ -130,7 +127,7 @@
                                 <option value="cafe">Café</option>
                                 <option value="crema">Crema</option>
                                 <option value="gris">Gris</option>
-                            </select>    
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -191,6 +188,28 @@
                     </div>
                 </div>
             </div>
+          <div class="col-12">
+            <div class="row">
+                <label for="client_name" class="col-md-2 col-12 form-label-pet">NOMBRE DUEÑO:</label>
+                <div class="col-md-10 col-12">
+                    <div class="form-group-icon">
+                        <input type="text" placeholder="Nombre del Dueño" class="form-group-input" name="client_name" id="client_name">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="row">
+                <label for="vet_name" class="col-md-2 col-12 form-label-pet"> VETERIANRIA:</label>
+                <div class="col-md-10 col-12">
+                    <div class="form-group-icon">
+                        <input type="text" placeholder="Nombre de la Veterinaria" class="form-group-input" name="vet_name" id="vet_name">
+                        <i class="fas fa-clinic-medical"></i>
+                    </div>
+                </div>
+            </div>
+          </div>
 
             <div class="col-12 form-group">
                 <div class="d-flex justify-content-start align-content-center">
@@ -208,20 +227,20 @@
                     <div class="file-upload-content">
                         <img class="file-upload-image" src="#" alt="your image" />
                         <div class="image-title-wrap">
-                        <button type="button" onclick="removeUpload()" class="remove-image">x 
+                        <button type="button" onclick="removeUpload()" class="remove-image">x
                         </button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-12 d-flex justify-content-end">
-                <button class="btn btn-green" type="submit">Actualizar</button>
+                <button class="btn btn-green" type="submit" onclick="updatePet()">Actualizar</button>
             </div>
         </form>
     </div>
-
     <script src="./js/pet-photo.js"></script>
     <script src="./js/dogBreedAPI.js"></script>
+    <script src="./js/uploadImage.js"></script>
     <script src="./js/simple-select.js"></script>
     <!-- Aquí termina cuerpo de la vista e inicia footer, agregado durante migración -->
     <footer class="footer">

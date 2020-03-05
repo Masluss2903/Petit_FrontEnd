@@ -13,55 +13,55 @@
     <link rel="shortcut icon" href="./assets/icono-petit.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.css">
-   <link rel="stylesheet" href="./css/admin.css" type="text/css">
+    <link rel="stylesheet" href="./css/admin.css" type="text/css">
     <title>Mi Tablero</title>
   </head>
   <body>
     <nav class="navbar navbar-petit navbar-expand-md" id="navbarPetit_blog">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html"
-          ><img src="./assets/SVG/logo-petit.svg" width="100px"
-        /></a>
-        <button
-          id="font-menu"
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSignup"
-          aria-controls="navbarSignup"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          Menú<i class="fa fa-bars ml-2"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSignup">
-          <ul class="navbar-nav ml-auto" id="options">
-            <li class="nav-item dropdown" id="btn-ingresar">
-              <a
-                class="btn btn-inicio dropdown-toggle"
-                role="button"
-                id="signUp"
-                data-toggle="dropdown"
-                href="#"
-                >Opciones</a
-              >
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="./update-pet.html"
-                  ><i class="fas fa-user-edit mr-2"></i>Editar Perfil</a
-                >
-                <a class="dropdown-item" href="./index.html"
-                  ><i class="fas fa-sign-out-alt mr-2"></i>Cerrar Sesión</a
-                >
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"
+              ><img src="./assets/SVG/logo-petit.svg" width="100px"
+            /></a>
+            <button
+              id="font-menu"
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSignup"
+              aria-controls="navbarSignup"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              Menú<i class="fa fa-bars ml-2"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSignup">
+              <ul class="navbar-nav ml-auto" id="options">
+                <li class="nav-item dropdown" id="btn-ingresar">
+                  <a
+                    class="btn btn-inicio dropdown-toggle"
+                    role="button"
+                    id="signUp"
+                    data-toggle="dropdown"
+                    href="#"
+                    >Opciones</a
+                  >
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="./update-pet.html"
+                      ><i class="fas fa-user-edit mr-2"></i>Editar Perfil</a
+                    >
+                    <a class="dropdown-item" href="./index.html"
+                      ><i class="fas fa-sign-out-alt mr-2"></i>Cerrar Sesión</a
+                    >
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
   <div class="breadcrumb-petit">
     <ol class="breadcrumb-mi-tablero">
       <li class="breadcrumb-item mi-tablero-item"><a href="./my-pets.html">Mi Tablero</a></li>
-      <li class="breadcrumb-item mi-tablero-item active"><a href="./my-patients.html">Mis Mascotas</a></li>
+      <li class="breadcrumb-item mi-tablero-item active"><a href="./my-pets.html">Mis Mascotas</a></li>
     </ol>
   </div>
   <!-- Termina menú -->
@@ -75,12 +75,12 @@
       </div><!--termina renglón del titulo de la pagina y boton de imprimir-->
       <div class="table-my-pet">
         <div class="d-flex justify-content-start pl-3">
-          <button onclick="window.location.href ='/update-pet.html'" class="btn btn-blue" id= "newpet"><i class="fas fa-plus plus"></i> NUEVO PACIENTE</button>
+          <a href="./pet-info-form.html" class="btn btn-blue" id= "newpet"><i class="fas fa-plus plus"></i> NUEVO PACIENTE</a>
         </div>
         <table id="pets" class="table table-hover">
           <thead class="title-table"><!--área donde estan los nombres de las columnas de la tabla-->
             <tr><!--fila donde estan los nombres de las columnas de la tabla-->
-              <th data-field="petPic" data-formatter="petPic">FOTO</th>
+              <th data-field="petPhoto" data-formatter="petPic">FOTO</th>
               <th data-field="petName">NOMBRE</th>
               <th data-field="petId" data-formatter="petButtonVaccines">VACUNAS</th>
               <th data-field="petId" data-formatter="petCalendarButton">CALENDARIO</th>
